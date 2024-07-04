@@ -1,5 +1,5 @@
 # Weld-Defects-Segmentation
-###Clone the RIAWELC dataset from the official repository by executing the following command 
+Clone the RIAWELC dataset from the official repository by executing the following command 
 ```bash
 git clone https://github.com/stefyste/RIAWELC.git
 ```
