@@ -1,0 +1,3 @@
+Jupyter Notebooks containing the first stage code 
+1. Run the Train_yolov8 notebook to train the model along with replacing the given portion 
+2. Run the Best_hyperparameter notebook to use the tune function and find the best hyperparameters for the YOLO model. 
