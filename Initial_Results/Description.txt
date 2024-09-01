@@ -1,0 +1,1 @@
+Initial Results hspown by YOLOv8 without hyperparameter tuning. The model was finetuned on 369 train images.
