@@ -18,7 +18,8 @@ We have utilised the YOLOv8[https://github.com/orgs/ultralytics/discussions/7472
 
 ### Sample Output
 
-![val_batch1_labels](https://github.com/user-attachments/assets/4537234a-e6ac-48d0-a8c4-1adf99e1a0ce)
+![val_batch1_pred](https://github.com/user-attachments/assets/548ef311-a98e-4782-a3e6-f8d8b1211b50)
+
 
 Run the Train Yolo Notebook by replacing the following code portion 
 
@@ -32,3 +33,4 @@ project = rf.workspace("user").project("pipeline1-boundingboxweld")
 version = project.version(1)
 dataset = version.download("yolov8-obb")
 ````
+With your own version of the Download code generated from the roboflow. Export the data in the form of YOLOv8-obb format. 
