@@ -16,11 +16,6 @@ SqueezeNet Implementation for classification of Defects on RIAWELC dataset.
 
 We have utilised the [YOLOv8](https://github.com/orgs/ultralytics/discussions/7472) object detection model to detect the welding region inside the input image to reduce the processing in the further model as the X-Ray welding images are high resolution.
 
-### Sample Output
-
-![val_batch1_pred](https://github.com/user-attachments/assets/548ef311-a98e-4782-a3e6-f8d8b1211b50)
-
-
 #### Training the model
 Run the Train Yolo Notebook by replacing the following code portion 
 
@@ -44,3 +39,7 @@ Make changes in the following code according to the requirements:
 model = YOLO("yolov8n-obb.pt")
 model.tune(data=f"{dataset.location}/data.yaml", epochs=100, iterations=100, optimizer="AdamW", plots=False, save=False, val=False)
 ````
+### Sample Output
+
+![val_batch1_pred](https://github.com/user-attachments/assets/548ef311-a98e-4782-a3e6-f8d8b1211b50)
+
