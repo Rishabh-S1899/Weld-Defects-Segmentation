@@ -2,11 +2,6 @@ from ultralytics import YOLO
 
 from IPython.display import display, Image
 
-!mkdir {HOME}/datasets
-%cd {HOME}/datasets
-
-!pip install roboflow --quiet
-
 from roboflow import Roboflow
 
 rf = Roboflow(api_key="YLXTeUbudCvbIf1n2CSf")
@@ -24,6 +19,7 @@ data['path'] = dataset.location
 with open(f'{dataset.location}/data.yaml', 'w') as file:
     yaml.dump(data, file, sort_keys=False)
 
-model = YOLO('yolov8n-obb.pt')
+model = YOLO("yolov8n-obb.pt")
 
-results = model.train(data=f"{dataset.location}/data.yaml", epochs=100, imgsz=640)
+# Tune hyperparameters on COCO8 for 30 epochs
+model.tune(data=f"{dataset.location}/data.yaml", epochs=100, iterations=100, optimizer="AdamW", plots=False, save=False, val=False)
